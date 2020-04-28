@@ -1,0 +1,18 @@
+<section>
+    <div
+    class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollUpDistance]="9"
+    [infiniteScrollThrottle]="150"
+    (scrolled)="onScrollDown()"
+    (scrolledUp)="onScrollUp()"
+  >
+<section class="photos">
+    <div class= "photo" *ngFor="let objPhoto of arrPhotos" data-toggle="modal" data-target=".bd-example-modal-xl" (click) = saveIdPhoto(objPhoto.id)>
+        <img src={{objPhoto.urls.small}} alt="">
+    </div>
+</section>
+</div>
+
+<app-photo-modal [infoPhotoModal]="infoPhoto" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true"></app-photo-modal>

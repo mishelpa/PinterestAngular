@@ -1,0 +1,43 @@
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col-6 img-photo">
+        <img class="photo" src="{{infoPhotoModal?.links.download}}" alt="">
+      </div>
+      <div class="columnDescription col-6 pl-4">
+        <h5>{{infoPhotoModal?.alt_description}}</h5>
+        <div class="user text-center">
+          <img class="img-user rounded-circle" src="{{infoPhotoModal?.user.profile_image.medium}}" alt="">
+          <h6>{{infoPhotoModal?.user.name}}</h6>
+        </div>
+        <div class="stats text-center">
+          <div class="stats2">
+            <div class="stats-icon">
+              <span><i class="fa fa-eye"></i></span>
+              <span>{{infoPhotoModal?.views}}</span>
+            </div>
+            <div class="stats-icon">
+              <span><i class="fa fa-arrow-circle-down"></i></span>
+              <span>{{infoPhotoModal?.downloads}}</span>
+            </div>
+          </div>
+          <div class="stats-icon">
+            <span><i class="fa fa-thumbs-up"></i></span>
+            <span>{{infoPhotoModal?.likes}}</span>
+          </div>
+        </div>
+        <div>
+          <h5>Tags</h5>
+          <div class="tags">
+            <ul>
+              <li *ngFor="let tags of infoPhotoModal?.tags">{{tags?.title}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
